@@ -2,7 +2,7 @@
 # 🚩 Objectifs
 - Apprendre les bases de WPF.
 - MVVM
-- Pratiquer les bases de XML avec un projet de reservation hotel.
+- Pratiquer les bases de XML avec un projet Dashboard avec système de navigation.
 
 # **📖 Theorie :**
 
@@ -46,18 +46,16 @@ WPF_Project.sln
 
 ## 📌 XAML (Extensible Application Markup Language)
 - Langage déclaratif pour définir l'interface utilisateur en WPF.
-- Permet une séparation claire entre le design (XAML) et la logique (C#).
+
 
 ## 🎨 Styles
-- Centralisent l'apparence des contrôles pour une cohérence visuelle.
-- Utilisation de `Resources` et `StaticResource/DynamicResource`.
+- Centralisent l'apparence des contrôles pour une cohérence visuelle ; Utilisation de `Resources` et `StaticResource/DynamicResource`.
 
 ## 💻 Code-behind
-- Logique C# associée à un fichier XAML.
-- À utiliser avec modération pour respecter l'architecture MVVM.
+- Logique C# associée à un fichier XAML, À utiliser avec modération pour respecter l'architecture MVVM !
 
 ## ⌨ Commandes (ICommand)
-- Alternative aux événements pour une meilleure séparation des préoccupations.
+- Alternative aux événements pour une meilleure séparation des préoccupations. On les gerer dans un package **Commandes**
 
 ## 📊 Liaison de Données (Data Binding)
 - Data binding is the process that establishes a connection between the app UI and the data it displays. If the binding has the correct settings and the data provides the proper notifications, when the data changes its value, the elements that are bound to the data reflect changes automatically.
@@ -67,19 +65,18 @@ WPF_Project.sln
 
 ## 🏗 Architecture MVVM (Model-View-ViewModel)
 Patron de conception dérivé de MVC, spécialement adapté pour WPF :
+                                                               
+ **Model** : Données et logique métier (C#), Le Modèle communique avec le serveur et notifie le ViewModel de son changement.                                                      
+ **View** : Interface utilisateur (XAML), La Vue reçoit toujours les actions de l’utilisateur et interagit seulement avec le ViewModel.                              
+ **ViewModel** Intermédiaire entre View et Model :                                 
+- Implémente `INotifyPropertyChanged`                                
+- Expose les commandes (ICommand) 
+- Gère la validation des données                                     
+- Écoute les événements du Model                                     
+- présenter les données du Model à la Vue                                   
 
-| Composant   | Rôle                                                                 |
-|-------------|----------------------------------------------------------------------|
-| **Model**   | Données et logique métier (C#), Le Modèle communique avec le serveur et notifie le ViewModel de son changement.                                                      |
-| **View**    | Interface utilisateur (XAML), La Vue reçoit toujours les actions de l’utilisateur et interagit seulement avec le ViewModel.                              |
-| **ViewModel**| Intermédiaire entre View et Model :                                 |
-|             | - Implémente `INotifyPropertyChanged`                                |
-|             | - Expose les commandes (ICommand)                                    |
-|             | - Gère la validation des données                                     |
-|             | - Écoute les événements du Model                                     |
-|             | - présenter les données du Model à la Vue                                   |
-
-## Navigation 
+‼️l'ajout des autres packages (commandes, services, exeptions . . . ) ne foire pas le model MVVM 
+## Navigation
 ## DependencyInjection
 ![Schéma MVVM](MVVM-2.png)
 
@@ -88,15 +85,12 @@ Patron de conception dérivé de MVC, spécialement adapté pour WPF :
 - Playlist XML (niveau débutant, en arabe) : [Xml](https://www.youtube.com/playlist?list=PLjTzpE6cvFakLb80cpN-9vUcGgL_BbOPI) (utile pour les bases avant WPF)
 - youtube mvvm : [MVVM](https://www.youtube.com/playlist?list=PLA8ZIAm2I03hS41Fy4vFpRw8AdYNBXmNm)
 
-## � Projet Pratique
+##  Projet Pratique
 **Exemple à réaliser** :  
 📌 Créer un *Dashboard avec système de navigation* pour appliquer ces concepts.  
 → Commencer par un design simple en XAML avant d'implémenter le Data Binding et MVVM.
 
-
-
-
-# **practice : reservation Project 🧮**
+# **practice : Dashboard Project 🧮**
 ## Objectif 
 - Pratiquer les bases de WPF et de la liaison de données.
 - Comprendre la structure d'un projet WPF et la séparation des préoccupations.
@@ -107,24 +101,24 @@ Patron de conception dérivé de MVC, spécialement adapté pour WPF :
 
 ## creer le projet 
 - Ouvrir Visual Studio et créer un nouveau projet WPF.
-- Nommer le projet "reservation" et choisir un emplacement pour enregistrer le projet.
+- Nommer le projet "Dashboard" et choisir un emplacement pour enregistrer le projet.
 - Sélectionner le framework .NET Core ou .NET Framework selon vos préférences.
 - Cliquer sur "Create" pour générer le projet.
 - Visual Studio crée automatiquement une fenêtre principale (MainWindow.xaml) et un fichier de code-behind (MainWindow.xaml.cs).
 ou utiliser la ligne des commande et taper : 
 ```bash
-dotnet new wpf -n reservation
+dotnet new wpf -n Dashboard
 ```
 
 ## Structure du Projet
 ```
 C:.
-└─── reservation
-    ├─── reservation : Le dossier reservation contient tout le code, les fichiers XAML et les autres ressources que Visual Studio utilise pour construire l'application.
+└─── Dashboard
+    ├─── Dashboard : Le dossier Dashboard contient tout le code, les fichiers XAML et les autres ressources que Visual Studio utilise pour construire l'application.
     │   
-    └─── reservation.sln : Le fichier .sln est l'entrée principale dans Visual Studio pour ouvrir et gérer l'ensemble du projet reservation.
+    └─── Dashboard.sln : Le fichier .sln est l'entrée principale dans Visual Studio pour ouvrir et gérer l'ensemble du projet Dashboard.
 ```
-## go on to reservation.sln and create your app check the code source 
+## go on to Dashboard.sln and create your app check the code source 
 
    
 ## Conclusion
