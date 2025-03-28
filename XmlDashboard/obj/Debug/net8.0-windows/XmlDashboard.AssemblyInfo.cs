@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XmlDashboard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc210bc30c06dc7779bc22139694f738e760b1a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa4dc978f1129d022f94f334e3251261df894034")]
 [assembly: System.Reflection.AssemblyProductAttribute("XmlDashboard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XmlDashboard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
